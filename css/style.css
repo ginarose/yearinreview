@@ -1,0 +1,28 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+	text-align: center;
+}
+
+button{
+	margin: auto;
+}
+
+.artist-tile{
+	width: 20%;
+	height: 155px;
+	background-color: #333;
+	color: #000;
+	display: inline-flex;
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	margin: 10px; 
+}
+
+.artist-name{
+	background-color: rgba(255,255,255,.4);
+	width: 100%;
+	
+}
