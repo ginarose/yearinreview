@@ -21,16 +21,19 @@ button{
 	background-color:rgba(255,0,0,0.5);
 }
 
-.artist-name{
-	background-color: rgba(255,255,255,.4);
+.artist-name{/*
+	background-color: rgba(255,255,255,.4);*/
 	width: 100%;
 	text-align: center;
 	letter-spacing: -1px;
 	display: inline-block;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.69);
 }
 
 .playcount{
 	width: 100%;
-	letter-spacing: 1px;
 	display: inline-block;
+	letter-spacing: 0px;
+	font-family: 'Oxygen Mono';
+	font-size: 10pt;
 }

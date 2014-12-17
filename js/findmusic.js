@@ -15,22 +15,20 @@ $(document).ready(function(){
 				$('#artists-grid').empty();
 				for (i=0; i<25; i++){
 					//add artist names to array
-					userArtists.push(data.topartists.artist[i].name);
+					userArtists.push(data.topartists.artist[i].url.substr(25));
 					$('#artists-grid').append("<div class='artist-tile' style='background: url("+data.topartists.artist[i].image[4]['#text']+");'><h2 class='artist-name'>"+data.topartists.artist[i].name+"</h2><p class='playcount'>"+data.topartists.artist[i].playcount+" listens this year</p></div>");
 				}
 
 				for (i=0; i<3; i++){
 					var artistHTMLSafe = userArtists[i];
 					console.log(artistHTMLSafe);
-					$.ajax({
-					url: "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist="+userArtists[i]+"&api_key=no&format=json",
-					dataType: "jsonp",
-					success:function(data){
-						console.log("http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist="+userArtists[i]+"&api_key=no&format=json 	");
-					}
-					})
-					
-					
+						$.ajax({
+						url: "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist="+userArtists[i]+"&api_key=no&format=json",
+						dataType: "jsonp",
+						success:function(data){
+							console.log("http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist="+artistHTMLSafe+"&api_key=no&format=json");
+							}
+						});
 				}
 
 			}
