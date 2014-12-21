@@ -13,10 +13,14 @@ $(document).ready(function(){
 			success:function(data){
 				$('#page-title').text(user+"'s year in review on Last.fm");
 				$('#artists-grid').empty();
+				$('#artists-grid').append("<h2>Top 25 Artists</h2><br>");
 				for (i=0; i<25; i++){
 					//add artist names to array
 					userArtists.push(data.topartists.artist[i].url.substr(25));
-					$('#artists-grid').append("<div class='artist-tile' style='background: url("+data.topartists.artist[i].image[4]['#text']+");'><h2 class='artist-name'>"+data.topartists.artist[i].name+"</h2><p class='playcount'>"+data.topartists.artist[i].playcount+" listens this year</p></div>");
+					$('#artists-grid').append("<div class='artist-tile'><div class='artist-tile-back' style='background: url("+data.topartists.artist[i].image[4]['#text']+");'></div>\
+							<div class='artist-tile-info'><p class='artist-name'>"+data.topartists.artist[i].name+"</p>\
+							<p class='playcount'>"+data.topartists.artist[i].playcount+" listens this year</p>\
+						</div></div>");
 				}
 
 				for (i=0; i<3; i++){

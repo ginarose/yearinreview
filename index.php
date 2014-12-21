@@ -17,8 +17,8 @@
 <body>
 	<h1 id="page-title">Last.fm Year in Review Generator</h1>
 		<form class="pure-form">
-		    <input class="pure-input-1" type="text" placeholder="your last.fm username" id="user-name">
-		    <button type="submit" class="pure-button pure-input-1" id="find-user">Find my stats <i class="fa fa-headphones"></i></button>
+		    <input class="pure-u-3-4" type="text" placeholder="your last.fm username" id="user-name">
+		    <button type="submit" class="pure-button pure-u-1-4" id="find-user">Find my stats <i class="fa fa-headphones"></i></button>
 		 </form>
 	<div id="artists-grid" class="pure-g"></div>
 </body>
